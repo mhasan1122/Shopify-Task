@@ -6,7 +6,7 @@ import seven from '../assets/img/seven.jpg'; // Replace with the correct path
 const Features = ({ className = '' }) => {
   return (
     <div
-      className={`bg-white p-8 max-w-6xl mx-auto rounded-2xl shadow-lg ${className} `}
+      className={`bg-white p-8 max-w-6xl mx-auto rounded-2xl shadow-lg ${className} mt-32 `}
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Feature 1 */}

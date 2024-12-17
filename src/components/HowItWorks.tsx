@@ -15,7 +15,7 @@ const HowItWorks: React.FC = () => {
     ];
 
     return (
-        <section className="max-w-6xl mx-auto px-4 py-8 bg-white ">
+        <section className="max-w-6xl mx-auto px-4 py-8 bg-white">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
                 How It Works
             </h2>
@@ -24,9 +24,9 @@ const HowItWorks: React.FC = () => {
             </p>
 
             {/* Flexbox Container for Equal Heights */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto max-w-4xl">
+            <div className="flex flex-col md:flex-row md:items-stretch gap-6 mx-auto max-w-4xl">
                 {/* Left Column */}
-                <div>
+                <div className="flex-1">
                     <div className="mb-4">
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
                             Plan Your Trip
@@ -49,11 +49,11 @@ const HowItWorks: React.FC = () => {
                 </div>
 
                 {/* Steps with Equal Height */}
-                <div className="flex flex-col items-center">
+                <div className="flex-1 flex flex-col items-center justify-center relative ">
                     {steps.map((step, index) => (
                         <div
                             key={step.stepNumber}
-                            className="text-center mb-6 flex flex-col items-center"
+                            className="text-center mb-6 relative flex flex-col items-center h-[16vh]"
                         >
                             {/* Step Number */}
                             <div className="w-12 h-12 bg-white text-black border border-[#0872BA66] flex items-center justify-center rounded-full text-base font-semibold">
@@ -61,16 +61,16 @@ const HowItWorks: React.FC = () => {
                             </div>
                             {/* Vertical Line */}
                             {index < steps.length - 1 && (
-                                <div className="h-28 border-l-2 border-dashed border-[#0872BA66]"></div>
+                                <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-px h-28 border-l-2 border-dashed border-[#0872BA66]"></div>
                             )}
                         </div>
                     ))}
                 </div>
 
                 {/* Right Column */}
-                <div>
+                <div className="flex-1">
                     <div className="mb-8">
-                        <img src={Three} alt="Connect and Build Relationships" className="w-full object-contain rounded-lg max-h-36" />
+                    <img src={Three} alt="Connect and Build Relationships" className="w-full object-contain rounded-lg max-h-36" />
 
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
                             Connect and Build Relationships
@@ -81,7 +81,7 @@ const HowItWorks: React.FC = () => {
                     </div>
 
                     <div>
-                        <img src={Four} alt="Secure Your Plans & Enjoy the Journey" className="w-full object-contain rounded-lg max-h-36" />
+                    <img src={Four} alt="Secure Your Plans & Enjoy the Journey" className="w-full object-contain rounded-lg max-h-36" />
 
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
                             Secure Your Plans & Enjoy the Journey
