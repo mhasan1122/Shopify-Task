@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+
+Project Live link.\
+Open [https://shopify-task-ts3f.vercel.app/](https://shopify-task-ts3f.vercel.app/) to view it in the browser.
+
 In the project directory, you can run:
 
 ### `npm start`
